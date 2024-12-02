@@ -1,40 +1,43 @@
-import { appText } from 'data/appText'
-import { FC, useContext } from 'react'
+import { appText } from 'data/appText';
+import { FC, useContext } from 'react';
 
-import Container from 'components/Atoms/Container/Container'
-import CartStyles from 'components/Molecules/Cart/Cart.module.css'
-import Selection from 'components/Molecules/Selection/Selection'
-import { AppContext } from 'hooks/useContext'
-
+import Container from 'components/Atoms/Container/Container';
+import CartStyles from 'components/Molecules/Cart/Cart.module.css';
+import Selection from 'components/Molecules/Selection/Selection';
+import { AppContext } from 'hooks/useContext';
+import Heading from 'components/Atoms/Headings/Headings'; // Make sure the import path is correct
+import Paragraph from 'components/Atoms/Paragraph/Paragraph'; // Import the Paragraph component
 
 interface ICartProps {
-  isShowCart?: boolean
+  isShowCart?: boolean;
 }
 
 const Cart: FC<ICartProps> = ({ isShowCart = false }) => {
-  const { handleCartRemoveAll, selectedCards } = useContext(AppContext)
-
+  const { handleCartRemoveAll, selectedCards } = useContext(AppContext);
 
   return (
     <>
       {isShowCart && (
         <Container className={CartStyles.cartWrapper} testId="cart">
           <Container className={CartStyles.cartHeader}>
-            <h3 className={CartStyles.cartHeading}>Shopping Cart</h3>
+            <Heading level="3" className={CartStyles.cartHeading}>
+              Shopping Cart
+            </Heading>
             {selectedCards?.length !== 0 && (
-              <h5
+              <Heading
+                level="5"
                 className={CartStyles.removeAction}
-                onClick={handleCartRemoveAll}
+                onClick={handleCartRemoveAll} // Properly handling the onClick event
               >
                 {appText.cart.deleteAllAction}
-              </h5>
+              </Heading>
             )}
           </Container>
           <Container className={CartStyles.cartContent}>
             {selectedCards?.length === 0 ? (
-              <p className={CartStyles.nullContent} data-testid="message">
+              <Paragraph className={CartStyles.nullContent} data-testid="message">
                 {appText.cart.emptyMessage}
-              </p>
+              </Paragraph>
             ) : (
               selectedCards?.map((el: DataItem) => (
                   <div key={el.id}>
@@ -46,7 +49,7 @@ const Cart: FC<ICartProps> = ({ isShowCart = false }) => {
         </Container>
       )}
     </>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

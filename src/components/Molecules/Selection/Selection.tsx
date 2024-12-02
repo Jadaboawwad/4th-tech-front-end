@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Container from 'components/Atoms/Container/Container';
 import SelectionStyles from 'components/Molecules/Selection/Selection.module.css';
 import Image from 'components/Atoms/Image/Image'; // Import the Image component
+import Paragraph from 'components/Atoms/Paragraph/Paragraph'; // Import the Paragraph component
 
 interface ISelectionProps {
   data?: DataItem;
@@ -23,7 +24,7 @@ const Selection: FC<ISelectionProps> = ({ data, id, testId }) => (
           className={SelectionStyles.itemLogo}
           src={data.imageUrl}
         />
-        <p className={SelectionStyles.itemName}>{data.name}</p>
+        <Paragraph className={SelectionStyles.itemName}>{data.name}</Paragraph>  // Updated to use Paragraph
       </Container>
     )}
   </>

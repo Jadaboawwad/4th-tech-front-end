@@ -4,6 +4,7 @@ import Container from 'components/Atoms/Container/Container';
 import AddProductStyles from 'components/Molecules/AddProduct/AddProduct.module.css';
 import { AppContext } from 'hooks/useContext';
 import Image from 'components/Atoms/Image/Image'; // Import the Image component
+import Paragraph from 'components/Atoms/Paragraph/Paragraph'; // Import the Paragraph component
 
 const AddProduct: FC = () => {
   const { handleShowModal, isShowModal } = useContext(AppContext);
@@ -21,9 +22,9 @@ const AddProduct: FC = () => {
             className={AddProductStyles.addProductImage}
             src="svg/add.svg"
           />
-          <p className={AddProductStyles.addProductTitle}>
+          <Paragraph className={AddProductStyles.addProductTitle}>
             {appText.addProduct.label}
-          </p>
+          </Paragraph>
         </Container>
       )}
     </>

@@ -1,19 +1,18 @@
-import { appText } from 'data/appText'
-import { FC, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { appText } from 'data/appText';
+import { FC, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import Container from 'components/Atoms/Container/Container'
-import BurgerStyles from 'components/Molecules/Burger/Burger.module.css'
-
+import Container from 'components/Atoms/Container/Container';
+import BurgerStyles from 'components/Molecules/Burger/Burger.module.css';
+import Paragraph from 'components/Atoms/Paragraph/Paragraph'; // Import the Paragraph component
 
 const Burger: FC = () => {
-  const [isActive, setIsActive] = useState<boolean>(false)
-
+  const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
     <Container className={BurgerStyles.burgerWrapper}>
       <Container className={BurgerStyles.menuWrapper}>
-        <p>{appText.menu.label}</p>
+        <Paragraph>{appText.menu.label}</Paragraph> {/* Using the Paragraph atom */}
         <Container
           className={isActive ? BurgerStyles.change : BurgerStyles.barsWrapper}
           onClick={() => setIsActive(!isActive)}
@@ -25,19 +24,17 @@ const Burger: FC = () => {
         </Container>
       </Container>
 
-   
-        {isActive && (
-          <ul className={BurgerStyles.burgerList}>
-            {appText.navItems.map((el, idx) => (
-                <li key={el}>
-                  <Link to={`/${appText.links[idx]}`}>{el}</Link>
-                </li>
-              ))}
-          </ul>
-        )}
-
+      {isActive && (
+        <ul className={BurgerStyles.burgerList}>
+          {appText.navItems.map((el, idx) => (
+            <li key={el}>
+              <Link to={`/${appText.links[idx]}`}>{el}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </Container>
-  )
-}
+  );
+};
 
-export default Burger
+export default Burger;

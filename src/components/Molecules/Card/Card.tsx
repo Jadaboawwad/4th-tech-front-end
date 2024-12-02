@@ -7,6 +7,7 @@ import { AppContext } from 'hooks/useContext';
 import { useSelection } from 'hooks/useSelection';
 import { useValidation } from 'hooks/useValidation';
 import Image from 'components/Atoms/Image/Image'; // Import the Image component
+import Paragraph from 'components/Atoms/Paragraph/Paragraph'; // Import the Paragraph component
 
 interface ICardProps {
   data?: DataItem;
@@ -35,7 +36,7 @@ const Card: FC<ICardProps> = ({
 }) => {
   const { handleCardClick } = useContext(AppContext);
   const { handleSetCardBorder, isCardHasBorder } = useSelection();
-  const { imagUrl } = useValidation(data); 
+  const { imagUrl } = useValidation(data); // Make sure it's 'imagUrl' not 'imagUrl'
   const borderStyle = useMemo(() => {
     if (isInHome) {
       return isSelectable
@@ -80,13 +81,13 @@ const Card: FC<ICardProps> = ({
             onClick={handleSetCardBorder}
             src={imagUrl}
           />
-          <p className={CardStyles.cardName}>{data.name}</p>
-          <p className={CardStyles.cardDescription}>{data.description}</p>
+          <Paragraph className={CardStyles.cardName}>{data.name}</Paragraph>
+          <Paragraph className={CardStyles.cardDescription}>{data.description}</Paragraph>
 
           {infoDisplay && (
             <Container className={CardStyles.info}>
-              <p className={CardStyles.infoNumber}>{appText.card.bagCount}</p>
-              <p className={CardStyles.infoPrice}>{appText.card.price}</p>
+              <Paragraph className={CardStyles.infoNumber}>{appText.card.bagCount}</Paragraph>
+              <Paragraph className={CardStyles.infoPrice}>{appText.card.price}</Paragraph>
             </Container>
           )}
 
