@@ -1,14 +1,12 @@
-import { appText } from 'data/appText'
-import { FC, useContext } from 'react'
-
-import Container from 'components/Atoms/Container/Container'
-import AddProductStyles from 'components/Molecules/AddProduct/AddProduct.module.css'
-import { AppContext } from 'hooks/useContext'
-
+import { appText } from 'data/appText';
+import { FC, useContext } from 'react';
+import Container from 'components/Atoms/Container/Container';
+import AddProductStyles from 'components/Molecules/AddProduct/AddProduct.module.css';
+import { AppContext } from 'hooks/useContext';
+import Image from 'components/Atoms/Image/Image'; // Import the Image component
 
 const AddProduct: FC = () => {
-  const { handleShowModal, isShowModal } = useContext(AppContext)
-
+  const { handleShowModal, isShowModal } = useContext(AppContext);
 
   return (
     <>
@@ -18,7 +16,7 @@ const AddProduct: FC = () => {
           onClick={handleShowModal}
           testId="addProduct"
         >
-          <img
+          <Image
             alt={appText.addProduct.alt}
             className={AddProductStyles.addProductImage}
             src="svg/add.svg"
@@ -29,8 +27,7 @@ const AddProduct: FC = () => {
         </Container>
       )}
     </>
-  )
-}
+  );
+};
 
-
-export default AddProduct
+export default AddProduct;

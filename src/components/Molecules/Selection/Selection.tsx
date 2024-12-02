@@ -1,12 +1,13 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
-import Container from 'components/Atoms/Container/Container'
-import SelectionStyles from 'components/Molecules/Selection/Selection.module.css'
+import Container from 'components/Atoms/Container/Container';
+import SelectionStyles from 'components/Molecules/Selection/Selection.module.css';
+import Image from 'components/Atoms/Image/Image'; // Import the Image component
 
 interface ISelectionProps {
-  data?: DataItem
-  id?: string | number
-  testId?: string
+  data?: DataItem;
+  id?: string | number;
+  testId?: string;
 }
 
 const Selection: FC<ISelectionProps> = ({ data, id, testId }) => (
@@ -17,7 +18,7 @@ const Selection: FC<ISelectionProps> = ({ data, id, testId }) => (
         key={id}
         testId={testId}
       >
-        <img
+        <Image
           alt={data.name}
           className={SelectionStyles.itemLogo}
           src={data.imageUrl}
@@ -28,4 +29,4 @@ const Selection: FC<ISelectionProps> = ({ data, id, testId }) => (
   </>
 )
 
-export default Selection
+export default Selection;
