@@ -1,64 +1,64 @@
-# TheSIS
-
-## Web Application
-
-TheSIS is a web application for presenting a coffee products for a coffee provider, it shows the products in pretty way
-with functionality of adding removing and updating it.
+Here’s an updated version for a company specializing in **robotics and artificial intelligence**:  
 
 ---
 
-## Tools Used
+# **4th Tech**
 
-VS Code
-
-- TypeScript
-- JavaScript
-- HTML5/CSS3
-- ReactJs
+## **Web Application**  
+**4th Tech** is a web application developed for a company specializing in providing research, development, and training services in the fields of **robotics** and **artificial intelligence**. The platform showcases technology products and services while allowing seamless management, including adding, removing, and updating items.  
 
 ---
 
-## Recent Updates
+## **Tools Used**  
 
-- Version 1.0 :
-
-  - Release Title : Application initialization
-  - Release Description : The code base and the react application created and files structure based on atomic design pattern
-  - Release Date : 4/7/2022
+**VS Code**  
+- TypeScript  
+- JavaScript  
+- HTML5/CSS3  
+- React.js  
 
 ---
 
-## Getting Started
+## **Recent Updates**  
 
-Clone this repository to your local machine
+### **Version 1.0**  
+- **Release Title:** Application Initialization  
+- **Release Description:**  
+  The codebase was created, and the React application was structured using the atomic design pattern to ensure scalability and maintainability.  
+- **Release Date:** 16/8/2022  
 
-```
-$ git clone https://github.com/Jadaboawwad/thesis.git
-```
+---
 
-Once downloaded, install the application dependencies by :
+## **Getting Started**  
 
-```
+Clone this repository to your local machine:  
+
+```bash
+git clone git@github.com:4th-Tech/web-application-front-end.git
+```  
+
+Install the application dependencies:  
+
+```bash
 yarn install
-```
+```  
 
-Once installed, you can run the application by :
+Run the application:  
 
-```
+```bash
 yarn start
-```
+```  
 
 ---
 
-## Change Log
+## **Change Log**  
 
-0.0.1 : Application Initialization - 4/7/2022
-1.0.0 : Application Release - 16/8/2022
+- **0.0.1:** Application Initialization - 2/12/2024  
 
 ---
 
-## Authors
+## **Authors**  
 
-Jad Abu Awwad
+Jehad Abu Awwad  
 
 ---
