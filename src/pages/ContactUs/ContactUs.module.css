@@ -1,23 +1,14 @@
 .contactUsWrapper {
   animation: slideUpWithFade 1.3s;
-  background: radial-gradient(
-      farthest-side at top right,
-      var(--wheat),
-      transparent 200px
-    ),
-    radial-gradient(
-      farthest-corner at top left,
-      var(--anakiwaapprox),
-      transparent 200px
-    ),
-    linear-gradient(transparent, var(--anakiwaapprox));
+  background: #0c1532;
   display: grid;
   grid-template:
     [row1-start] 'header' 100px [row1-end]
     [row2-start] 'cart' 100px [row2-end]
     [row3-start] 'contactUs' auto [row3-end] / auto;
   justify-content: center;
-  padding: 10px;
+  padding: 64px;
+  height: 100vh;
 }
 
 .contactUs {

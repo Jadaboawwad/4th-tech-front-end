@@ -1,9 +1,8 @@
 import { FC } from 'react'
 
 import Container from 'components/Atoms/Container/Container'
-import Content from 'components/Organisms/Content/Content'
 import Header from 'components/Organisms/Header/Header'
-import Hero from 'components/Organisms/Hero/Hero'
+// import Hero from 'components/Organisms/Hero/Hero'
 
 import 'styles/App.css'
 import { useLoadData } from 'hooks/useLoadData'
@@ -43,8 +42,6 @@ const App: FC = () => {
     <AppProvider appContext={context}>
       <Container className="appContainer">
         <Header />
-        <Hero />
-        <Content />
       </Container>
     </AppProvider>
   )

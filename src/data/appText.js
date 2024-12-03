@@ -35,20 +35,16 @@ export const appText = {
   },
   links: [
     '',
+    'our-services',
     'about-us',
-    'our-lands',
-    'our-suppliers',
-    'products',
     'contact-us',
   ],
   logo: { alt: 'logo' },
   menu: { label: 'Menu' },
   navItems: [
     'Home',
+    'Our Services',
     'About Us',
-    'Our Lands',
-    'Our Suppliers',
-    'Products',
     'Contact Us',
   ],
   productForm: {

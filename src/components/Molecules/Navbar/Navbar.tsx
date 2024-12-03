@@ -1,26 +1,26 @@
-import { appText } from 'data/appText'
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import React, { FC } from 'react';
+import Container from 'components/Atoms/Container/Container';
+import NavList from 'components/Atoms/NavList/NavList';
+import NavItem from 'components/Atoms/NavItem/NavItem';
+import { appText } from 'data/appText';
+import { useViewport } from 'hooks/useViewport';
 
-import Container from 'components/Atoms/Container/Container'
-import NavbarStyles from 'components/Molecules/Navbar/Navbar.module.css'
-import { useViewport } from 'hooks/useViewport'
+const Navbar: FC = () => {
+  const viewport = useViewport();
 
-
-const Navbar: FC = () => (
-  <>
-    {useViewport() === 'extra-large' && (
-      <Container className={NavbarStyles.navbarWrapper}>
-        <ul className={NavbarStyles.navbarList} data-testid="navbarList">
-          {appText.navItems.map((el, idx) => (
-              <li data-testid="listitem" key={el}>
-                <Link to={`/${appText.links[idx]}`}>{el}</Link>
-              </li>
+  return (
+    <>
+      {viewport === 'extra-large' && (
+        <Container className="navbarWrapper">
+          <NavList>
+            {appText.navItems.map((item, idx) => (
+              <NavItem key={item} link={`/${appText.links[idx]}`} label={item} />
             ))}
-        </ul>
-      </Container>
-    )}
-  </>
-)
+          </NavList>
+        </Container>
+      )}
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

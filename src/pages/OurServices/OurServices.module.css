@@ -1,48 +1,39 @@
-.ourSuppliersWrapper {
+.ourServicesWrapper {
   animation: slideUpWithFade 1.3s;
-  background: radial-gradient(
-      farthest-side at top right,
-      var(--wheat),
-      transparent 200px
-    ),
-    radial-gradient(
-      farthest-corner at top left,
-      var(--anakiwaapprox),
-      transparent 200px
-    ),
-    linear-gradient(transparent, var(--anakiwaapprox));
+  background: #0c1532;
   display: grid;
   grid-template:
     [row1-start] 'header' 100px [row1-end]
     [row2-start] 'cart' 100px [row2-end]
-    [row3-start] 'ourSuppliers' auto [row3-end] / auto;
+    [row3-start] 'ourServices' auto [row3-end] / auto;
   justify-content: center;
-  padding: 10px;
+  padding: 64px;
+  height: 100vh;
 }
 
-.ourSuppliers{
+.ourServices {
   min-height: 100vh;
   width: 100vw;
 }
 
 @media (max-width: 1400px) {
-  .ourSuppliersWrapper {
+  .ourServicesWrapper {
     grid-template:
       [row1-start] 'header' auto [row1-end]
       [row2-start] 'cart' auto [row2-end]
-      [row3-start] 'ourSuppliers' auto [row3-end] / auto;
+      [row3-start] 'ourServices' auto [row3-end] / auto;
     zoom: 0.9;
   }
 }
 
 @media (max-width: 390px) {
-  .ourSuppliersWrapper {
+  .ourServicesWrapper {
     zoom: 0.8;
   }
 }
 
 @media (max-width: 330px) {
-  .ourSuppliersWrapper {
+  .ourServicesWrapper {
     zoom: 0.7;
   }
 }

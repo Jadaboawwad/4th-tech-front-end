@@ -4,6 +4,10 @@
     flex-direction: column;
     margin: 25px;
   }
+
+  .name {
+    color: var(--white);
+  }
   
   .menuWrapper {
     color: var(--gray);
@@ -47,7 +51,7 @@
   .bar1,
   .bar2,
   .bar3 {
-    background-color: var(--merlin);
+    background-color: var(--white);
     height: 5px;
     margin: 3px 20px;
     transition: 1.4s;
