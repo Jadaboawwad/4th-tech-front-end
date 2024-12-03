@@ -2,13 +2,13 @@ import { FC } from 'react'
 
 import Container from 'components/Atoms/Container/Container'
 import Header from 'components/Organisms/Header/Header'
-// import Hero from 'components/Organisms/Hero/Hero'
 
 import 'styles/App.css'
 import { useLoadData } from 'hooks/useLoadData'
 import { useSelection } from 'hooks/useSelection'
 import { useScrollTo } from 'hooks/useScrollTo'
 import { AppProvider } from 'hooks/useContext'
+import Hero from 'components/Organisms/Hero/Hero'
 
 const App: FC = () => {
   const { data } = useLoadData()
@@ -42,6 +42,7 @@ const App: FC = () => {
     <AppProvider appContext={context}>
       <Container className="appContainer">
         <Header />
+        <Hero/>
       </Container>
     </AppProvider>
   )

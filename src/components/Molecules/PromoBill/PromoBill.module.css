@@ -1,0 +1,44 @@
+.promoPill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1a1a3d;
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 2rem; 
+  height: 40px;
+}
+
+.badge {
+  background-color: white;
+  color: #1a1a3d;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-right: 8px;
+}
+
+.description {
+  color: white;
+  font-size: 1.5rem; 
+}
+
+
+@media (max-width: 1400px) {
+  .promoPill {
+    font-size: 1.5rem; 
+    padding: 6px 12px; 
+    height: 30px; 
+  }
+
+  .badge {
+    font-size: 0.75rem; 
+    padding: 2px 4px; 
+  }
+
+  .description {
+    font-size: 1.2rem; 
+  }
+}
+

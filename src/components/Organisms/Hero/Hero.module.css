@@ -1,28 +1,103 @@
-.heroWrapper {
-  align-items: flex-end;
+.gridContainer {
+  margin: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr; /* Two columns on the left are each 1 fraction and the right column is twice the size */
+  grid-template-rows: auto 1fr 1fr; /* Three rows: Top for the promo pill, and two for the content blocks */
+  grid-template-areas: 
+    "promo promo promo"
+    "left1 left1 right"
+    "left3 left3 right";
+  height: 50vh;  
+  padding: 100px 256px;
+}
+
+.promoPillWrapper {
+  grid-area: promo; 
+  height: 100px;
+  padding: 32px 3vw;
+}
+
+
+.leftBlock1 {
+  grid-area: left1;
+  padding: 1rem 3vw;
+}
+
+
+.leftBlock2 {
+  grid-area: left3;
+  padding: 1rem 3vw;
+}
+
+
+.rightBlock {
+  grid-area: right;
+  padding: 0px 3rem;
+}
+
+
+.leftParagraph {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+
+.buttonTitle {
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 4px;
+}
+
+
+.button {
   display: flex;
-  grid-area: hero;
+  align-items: center;
   justify-content: center;
+  background-color: #3671E9; /* Adjust gradient colors as needed */
+  color: white;
+  padding: 1rem 20px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin: 1rem;
 }
 
-.heroCard {
-  padding-bottom: 10px;
-  padding-top: 393px;
+.button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.info {
+.icon {
+  margin-left: 1rem;
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
+
+.promoPillWrapper, .leftBlock1, .leftBlock2, .rightBlock {
+  padding: 16px; /* Adjust padding for smaller screens */
+}
+
 
 @media (max-width: 1400px) {
-  .heroWrapper {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
+  .gridContainer {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-areas:
+      "promo"
+      "left1"
+      "left3"
+      "right"; /* Now the right block is below leftBlock2 */
+
+      padding: 0px;
   }
 
-  .heroCard {
-    display: none;
+  .promoPillWrapper, .leftBlock1, .leftBlock2, .rightBlock {
+    padding: 8px; /* Less padding on smaller screens */
   }
+
 }
