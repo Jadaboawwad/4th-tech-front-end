@@ -14,6 +14,7 @@
   --paleOyster: #9c8e76;
   --wheat: #f5d5bc;
   --white: #ffffff;
+  --background: #0c1532;
   --grad: radial-gradient(
       farthest-side at top right,
       var(--wheat),
@@ -51,52 +52,86 @@
 }
 
 * {
-  min-width: fit-content;
-  background: #0c1532;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--background);
 }
+
 .appContainer {
-  animation: slideUpWithFade 1.3s;
-  background: #0c1532;
-  display: grid;
-  grid-template:
-    [row1-start] 'header' 100px [row1-end]
-    [row2-start] 'cart' 100px [row2-end]
-    [row3-start] 'hero' auto [row3-end]
-    [row4-start] 'content' auto [row4-end] / auto;
-  padding: 64px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all content horizontally */
+  justify-content: center; /* Center content vertically */
+  min-height: 100vh; /* Minimum height to take full viewport height */
 }
 
-@media (max-width: 1400px) {
+/* Hero and Cards styles for Mobile */
+.hero, .cardsWrapper {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.button, .buttonTitle, .leftParagraph {
+  text-align: center; 
+}
+
+/* Adaptation for tablets and desktops */
+@media (min-width: 768px) {
   .appContainer {
-    grid-template:
-      [row1-start] 'header' auto [row1-end]
-      [row2-start] 'cart' auto [row2-end]
-      [row3-start] 'hero' auto [row3-end]
-      [row4-start] 'content' auto [row4-end] / auto;
-    zoom: 0.9;
+    padding: 32px; 
+    gap: 20px;
+  }
+
+  .hero, .cardsWrapper {
+    flex-direction: row; 
+    gap: 20px;
+  }
+
+  .button, .buttonTitle, .leftParagraph {
+    text-align: left; 
   }
 }
 
-@media (max-width: 390px) {
+/* Additional styles for large desktops */
+@media (min-width: 1024px) {
   .appContainer {
-    zoom: 0.8;
+    grid-template-rows: 100px auto 1fr auto; 
   }
 }
 
-@media (max-width: 330px) {
-  .appContainer {
-    zoom: 0.7;
-  }
-}
-
-@keyframes slideUpWithFade {
+/* Animation and keyframes for interaction */
+@keyframes slideInLeft {
   0% {
-    opacity: 0.1;
-    transform: translateY(15px);
+    opacity: 0;
+    transform: translateX(-100%);
   }
-  100% {
-    transform: translateY(0);
+  to {
     opacity: 1;
+    transform: translateX(0);
   }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 0.5s forwards;
+}
+
+.button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }

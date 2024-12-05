@@ -1,151 +1,89 @@
+/* Base mobile styles for the card */
 .cardWrapper {
-  align-items: center;
-  animation: slideUpWithFade 1.3s;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: var(--card-shadow);
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 230px;
-  justify-content: flex-end;
-  margin: 0 20px;
-  padding: 10px;
-  width: 220px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 70vw; /* Adapt based on screen width */
 }
 
-.mainCardImage {
-  border-radius: 10px;
-  height: fit-content;
-  max-height: 390px;
+.cardWrapper:hover {
+  transform: scale(1.05);
+  background-color: #0c1532;
+}
+
+.cardImage {
+  width: 50%;
+  max-width: 100px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   width: 100%;
 }
 
-.cardFilled {
-  align-items: center;
-  animation: slideUpWithFade 1.3s;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: var(--card-shadow);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  justify-content: space-evenly;
-  padding: 15px;
-  width: 220px;
-}
-
-.cardImageFilled {
-  border-radius: 10px;
-  height: fit-content;
-  max-height: 200px;
-  width: 70%;
-}
-
-.selectedCard {
-  align-items: center;
-  animation: slideUpWithFade 1.3s;
-  background-color: var(--white);
-  border-radius: 10px;
-  border: 3px solid var(--gray);
-  box-shadow: var(--card-shadow);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  justify-content: space-evenly;
-  padding: 10px;
-  width: 220px;
-}
-
-.cardName {
-  color: var(--merlin);
-  font-family: GoogleSans-Bold;
-  font-size: 1.2rem;
-  line-height: 22px;
-  margin-top: 5px;
+.cardTitle {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
 }
 
 .cardDescription {
-  color: var(--paleOyster);
-  font-size: 0.7rem;
-  line-height: 145%;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  text-align: center;
-  width: min-content;
-}
-
-.info {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.info p {
-  margin-right: 10px;
-}
-
-.infoNumber,
-.infoPrice {
-  font-family: GoogleSans-Bold;
-  font-size: 1.5rem;
-}
-
-.cardOperations {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  row-gap: 10px;
-}
-
-.deleteWrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 0px 50px;
-  width: 100%;
-}
-
-.delete {
-  float: right;
-  cursor: pointer;
-  height: 30px;
-  padding: 10px;
-  width: fit-content;
-  border-radius: 150px;
-  background-color: var(--white);
-}
-
-.update {
-  background: var(--blue-grad);
-  border-radius: 10px;
-  border-width: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 100;
   color: var(--white);
+  text-align: center;
+  max-width: 300px;
+}
+
+.cardButton {
+  background-color: #3671E9;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 16px;
+  border: none;
   cursor: pointer;
-  height: 40px;
-  margin-bottom: 30px;
-  padding: 10px 0;
-  width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin: 2rem;
+  align-self: center;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 768px) {
+  .cardWrapper {
+    width: 600px;
+    max-width: 80vw; /* Adjust max width to better fit medium screens */
+  }
+
   .cardImage {
-    height: 50vh;
+    width: 35%;
+    max-width: 150px;
   }
 
-  .cardFilled {
-    margin: auto;
+  .cardTitle {
+    font-size: 2rem;
   }
-}
 
-@keyframes slideUpWithFade {
-  0% {
-    opacity: 0.1;
-    transform: translateY(25px);
+  .cardDescription {
+    font-size: 1.5rem;
+    max-width: 550px;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  .cardButton {
+    padding: 1rem 20px;
+    font-size: 1.5rem;
   }
 }

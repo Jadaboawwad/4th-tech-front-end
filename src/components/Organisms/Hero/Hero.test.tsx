@@ -13,7 +13,7 @@ const heroElements = {
 describe('Hero', () => {
   describe('When Hero is rendered', () => {
     it('renders the maincard with hero center and view more by default', () => {
-      render(<Hero />)
+      render(<Hero scrollToRef={null} />)
       expect(heroElements.mainCard()).toBeInTheDocument()
       expect(heroElements.heroCenter()).toBeInTheDocument()
       expect(heroElements.viewMore()).toBeInTheDocument()

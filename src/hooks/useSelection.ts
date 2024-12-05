@@ -34,7 +34,6 @@ export const useSelection = () => {
 
   const handleCardClick = (ref: RefObject<unknown>, data: DataItem) => {
     setSelectedCards((prev) => [...prev, data]);
-    setSelectedCards((currentCards) => currentCards.filter((card) => card.id !== data.id));
   };
 
   const handleShowModal = (timeout = 200) => {
@@ -103,10 +102,10 @@ export const useSelection = () => {
 
 
           variables: {
-            description: uploadedData.description,
-            imageUrl: uploadedData.imageUrl,
-            name: uploadedData.name,
-            productId: uploadedData.id,
+            description: uploadedData.subtitle,
+            imageUrl: uploadedData.imageSrc,
+            name: uploadedData.title,
+            productId: uploadedData.buttonText,
           },
         }),
       });

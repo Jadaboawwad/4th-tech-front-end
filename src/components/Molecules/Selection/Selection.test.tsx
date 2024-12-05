@@ -5,14 +5,6 @@ import Selection from './Selection'
 
 const { queryByAltText, queryByTestId, queryByText } = screen
 
-const sampleDataItems = {
-  fail: {
-    description: '',
-    id: '',
-    imageUrl: '',
-    name: '',
-  },
-}
 
 const selectionElements = {
   image: () => queryByAltText(data[0].name),
@@ -23,7 +15,7 @@ const selectionElements = {
 describe('Selection', () => {
   describe('When the cart is not empty', () => {
     it('should render a selection if data provided', () => {
-      render(<Selection data={data[0]} testId="select-0" />)
+      render(<Selection  testId="select-0" />)
 
       expect(selectionElements.image()).toBeInTheDocument()
       expect(selectionElements.selection()).toBeInTheDocument()
@@ -31,7 +23,7 @@ describe('Selection', () => {
     })
 
     it('should not render a selection if data provided is not valid', () => {
-      render(<Selection data={sampleDataItems.fail} testId="select-0" />)
+      render(<Selection testId="select-0" />)
 
       expect(selectionElements.image()).not.toBeInTheDocument()
       expect(selectionElements.text()).not.toBeInTheDocument()

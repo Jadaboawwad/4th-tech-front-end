@@ -1,33 +1,29 @@
-import { FC, ReactNode } from 'react'
+import { ReactNode, forwardRef } from 'react';
 
 interface IContainerProps {
-  children: ReactNode | ReactNode[]
-  className?: string
-  id?: string | number
-  // eslint-disable-next-line
-  onClick?: any
-  // eslint-disable-next-line
-  componentRef?: any
-  testId?: string
+  children: ReactNode | ReactNode[];
+  className?: string;
+  id?: string | number;
+  onClick?: any;
+  testId?: string;
 }
 
-const Container: FC<IContainerProps> = ({
+const Container = forwardRef<HTMLDivElement, IContainerProps>(({
   children,
   className,
-  componentRef,
   id,
   onClick,
-  testId,
-}) => (
+  testId
+}, ref) => (
   <div
     className={className}
     data-testid={testId}
     id={`${id}`}
     onClick={onClick}
-    ref={componentRef}
+    ref={ref}  // Apply ref to the div
   >
     {children}
   </div>
-)
+));
 
-export default Container
+export default Container;

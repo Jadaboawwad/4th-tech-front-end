@@ -2,11 +2,12 @@ export {}
 
 declare global {
   interface DataItem {
-    description: string
-    id: string
-    imageUrl: string
-    name: string
+    imageSrc: string;
+    title: string;
+    subtitle: string;
+    buttonText: string;
   }
+  
 }
 
 // types/konva.d.ts

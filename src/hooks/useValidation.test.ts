@@ -14,11 +14,11 @@ const samples = {
 describe('useImageValidation', () => {
   describe('When the hook is rendered', () => {
     it('should validate the image url', async () => {
-      const { result } = renderHook(() => useValidation(samples.valid))
+      const { result } = renderHook(() => useValidation())
       const validate = jest.fn(result.current.handleValidation)
 
       act(() => {
-        validate(samples.valid)
+        
       })
       expect(validate).toHaveBeenCalledWith(samples.valid)
     })
@@ -28,7 +28,7 @@ describe('useImageValidation', () => {
       const validate = jest.fn(result.current.handleValidation)
 
       act(() => {
-        validate(samples.valid)
+        
       })
       expect(validate).toHaveBeenCalledWith(samples.valid)
     })

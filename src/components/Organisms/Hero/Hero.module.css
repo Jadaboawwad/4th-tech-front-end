@@ -1,103 +1,141 @@
+/* Base mobile styles for the grid container and its elements */
 .gridContainer {
-  margin: 32px;
+  margin: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr; /* Two columns on the left are each 1 fraction and the right column is twice the size */
-  grid-template-rows: auto 1fr 1fr; /* Three rows: Top for the promo pill, and two for the content blocks */
-  grid-template-areas: 
-    "promo promo promo"
-    "left1 left1 right"
-    "left3 left3 right";
-  height: 50vh;  
-  padding: 100px 256px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "promo"
+    "left1"
+    "left3"
+    "right";
+  height: auto; 
+  padding: 1rem; 
 }
 
 .promoPillWrapper {
-  grid-area: promo; 
+  grid-area: promo;
   height: 100px;
-  padding: 32px 3vw;
+  padding: 16px 5%; 
 }
 
-
-.leftBlock1 {
+.leftBlock1,
+.leftBlock2,
+.rightBlock {
   grid-area: left1;
-  padding: 1rem 3vw;
+  padding: 8px 5%;
 }
-
-
-.leftBlock2 {
-  grid-area: left3;
-  padding: 1rem 3vw;
-}
-
 
 .rightBlock {
   grid-area: right;
-  padding: 0px 3rem;
+  padding: 0px 10%; 
 }
-
 
 .leftParagraph {
   color: white;
-  font-size: 3.5rem;
+  font-size: 1.5rem; 
   font-weight: bold;
 }
 
-
 .buttonTitle {
   color: white;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 0.9rem; 
+  padding: 0.5rem;
   margin: 4px;
 }
-
 
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3671E9; /* Adjust gradient colors as needed */
+  background-color: #3671E9;
   color: white;
-  padding: 1rem 20px;
+  padding: 0.8rem 15px; 
   border-radius: 16px;
   border: none;
-  outline: none;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem; 
   font-weight: bold;
   transition: all 0.3s;
   margin: 1rem;
 }
 
 .button:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .icon {
-  margin-left: 1rem;
+  margin-left: 0.5rem; 
   display: flex;
   align-items: center;
 }
 
-.promoPillWrapper, .leftBlock1, .leftBlock2, .rightBlock {
-  padding: 16px; /* Adjust padding for smaller screens */
+/* Styles for tablets and up */
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    grid-template-areas:
+      "promo promo"
+      "left1 right"
+      "left3 right";
+    padding: 2rem 5vw; 
+    margin:0px 250px;
+  }
+
+  .leftParagraph, .buttonTitle {
+    font-size: 2rem; 
+  }
+
+  .button {
+    padding: 1rem 20px; 
+    font-size: 2rem; 
+  }
+
+  .icon {
+    margin-left: 1rem; 
+  }
 }
 
-
-@media (max-width: 1400px) {
+/* Styles for desktops */
+@media (min-width: 1024px) {
   .gridContainer {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr 1fr 2fr; 
     grid-template-areas:
-      "promo"
-      "left1"
-      "left3"
-      "right"; /* Now the right block is below leftBlock2 */
-
-      padding: 0px;
+      "promo promo promo"
+      "left1 left1 right"
+      "left3 left3 right";
+    padding: 2rem 10vw; 
   }
+}
 
-  .promoPillWrapper, .leftBlock1, .leftBlock2, .rightBlock {
-    padding: 8px; /* Less padding on smaller screens */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 0.5s forwards;
 }

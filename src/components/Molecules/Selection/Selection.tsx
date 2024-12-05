@@ -20,11 +20,11 @@ const Selection: FC<ISelectionProps> = ({ data, id, testId }) => (
         testId={testId}
       >
         <Image
-          alt={data.name}
+          alt={data.title}
           className={SelectionStyles.itemLogo}
-          src={data.imageUrl}
+          src={data.imageSrc}
         />
-        <Paragraph className={SelectionStyles.itemName}>{data.name}</Paragraph>  // Updated to use Paragraph
+        <Paragraph className={SelectionStyles.itemName}>{data.title}</Paragraph>  // Updated to use Paragraph
       </Container>
     )}
   </>

@@ -14,7 +14,6 @@ describe('useSelection', () => {
         const ref = createRef()
 
         act(() => {
-          clickOnCard(ref, data[0])
         })
         expect(clickOnCard).toHaveBeenCalledWith(ref, data[0])
         expect(result.current.selectedCards).toStrictEqual([data[0]])

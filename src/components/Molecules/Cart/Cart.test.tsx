@@ -32,7 +32,6 @@ describe('Cart', () => {
             handleCardClick: jest.fn(),
             handleMutation: jest.fn(),
             handleShowModal: jest.fn(),
-            selectedCards: [data[1]],
           }}
         >
           <Cart isShowCart />
@@ -47,11 +46,9 @@ describe('Cart', () => {
       const { rerender } = render(
         <AppProvider
           appContext={{
-            data,
             handleCardClick: jest.fn(),
             handleMutation: jest.fn(),
             handleShowModal: jest.fn(),
-            selectedCards: [data[1]],
           }}
         >
           <Cart isShowCart />
@@ -63,7 +60,6 @@ describe('Cart', () => {
       rerender(
         <AppProvider
           appContext={{
-            data,
             handleCardClick: jest.fn(),
             handleMutation: jest.fn(),
             handleShowModal: jest.fn(),

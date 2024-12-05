@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 
 import Container from 'components/Atoms/Container/Container'
 import Header from 'components/Organisms/Header/Header'
@@ -9,6 +9,7 @@ import { useSelection } from 'hooks/useSelection'
 import { useScrollTo } from 'hooks/useScrollTo'
 import { AppProvider } from 'hooks/useContext'
 import Hero from 'components/Organisms/Hero/Hero'
+import TechnologyAreaCards from 'components/Organisms/TechnologyAreasCards/TechnologyAreasCards'
 
 const App: FC = () => {
   const { data } = useLoadData()
@@ -38,11 +39,15 @@ const App: FC = () => {
     selectedCards,
   }
 
+  const techAreaRef = useRef(null); // Create a ref
+
+
   return (
     <AppProvider appContext={context}>
       <Container className="appContainer">
         <Header />
-        <Hero/>
+        <Hero scrollToRef={techAreaRef} />
+        <TechnologyAreaCards ref={techAreaRef} />
       </Container>
     </AppProvider>
   )

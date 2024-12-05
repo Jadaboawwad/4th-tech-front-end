@@ -40,8 +40,8 @@ const Cart: FC<ICartProps> = ({ isShowCart = false }) => {
               </Paragraph>
             ) : (
               selectedCards?.map((el: DataItem) => (
-                  <div key={el.id}>
-                    <Selection data={el} testId={`select-${el.id}`} />
+                  <div >
+                    <Selection data={el} testId={`select-${el.title}`} />
                   </div>
                 ))
             )}
