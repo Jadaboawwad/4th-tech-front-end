@@ -1,9 +1,6 @@
 /* Base mobile styles */
 .areaWrapper {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -12,11 +9,7 @@
 }
 
 .cardsWrapper {
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.805);
   border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -27,10 +20,8 @@
 
 .title {
   backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.805);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: var(--white);
   font-size: 3rem;
   margin: 3rem auto; /* Center the title */
   padding: 2rem;

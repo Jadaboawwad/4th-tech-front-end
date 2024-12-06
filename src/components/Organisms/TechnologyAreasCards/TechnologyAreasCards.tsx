@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer'; // Import the hook
 const TechnologyAreaCards = forwardRef((props, ref) => {
   const { inView, ref: inViewRef } = useInView({
     threshold: 0.5, 
-    triggerOnce: false
+    triggerOnce: true
   });
 
   const setRefs = node => {

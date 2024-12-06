@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import data from 'data/items.json'
 
 import Cart from 'components/Molecules/Cart/Cart'
 

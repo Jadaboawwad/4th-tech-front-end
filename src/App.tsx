@@ -10,6 +10,7 @@ import { useScrollTo } from 'hooks/useScrollTo'
 import { AppProvider } from 'hooks/useContext'
 import Hero from 'components/Organisms/Hero/Hero'
 import TechnologyAreaCards from 'components/Organisms/TechnologyAreasCards/TechnologyAreasCards'
+import FeatureSection from 'components/Organisms/FeatureSection/FeatureSection'
 
 const App: FC = () => {
   const { data } = useLoadData()
@@ -48,6 +49,7 @@ const App: FC = () => {
         <Header />
         <Hero scrollToRef={techAreaRef} />
         <TechnologyAreaCards ref={techAreaRef} />
+        <FeatureSection />
       </Container>
     </AppProvider>
   )

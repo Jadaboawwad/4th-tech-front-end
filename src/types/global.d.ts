@@ -2,10 +2,10 @@ export {}
 
 declare global {
   interface DataItem {
-    imageSrc: string;
-    title: string;
-    subtitle: string;
     buttonText: string;
+    imageSrc: string;
+    subtitle: string;
+    title: string;
   }
   
 }

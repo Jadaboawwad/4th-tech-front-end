@@ -1,6 +1,5 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { appText } from 'data/appText'
-import data from 'data/items.json'
 
 import { AppProvider } from 'hooks/useContext'
 import { render } from 'utils/testUtils'
