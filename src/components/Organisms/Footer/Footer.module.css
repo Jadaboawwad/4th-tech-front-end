@@ -1,0 +1,61 @@
+.footerWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "logo links payment"
+        "copyright social social";
+    color: white;
+    padding: 20px;
+    width: 90vw;
+    height: 30vh;
+    padding: 100px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.payment {
+    grid-area: payment;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5rem;
+}
+
+.socialMedia {
+    grid-area: social;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.copyRight {
+    grid-area: copyright;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.socialIcon {
+    margin-left: 10px;
+}
