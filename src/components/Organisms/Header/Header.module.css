@@ -18,7 +18,7 @@
 @media (min-width: 1400px) {
   .headerWrapper {
     flex-direction: row-reverse; 
-    width: 80vw;  
+    width: 100vw;  
   }
 
   .bodyWrapper {

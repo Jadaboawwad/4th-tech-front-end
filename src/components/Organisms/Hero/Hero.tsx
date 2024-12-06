@@ -5,6 +5,7 @@ import Button from 'components/Atoms/Button/Button';
 import PromoPill from 'components/Molecules/PromoBill/PromoBill';
 import Container from 'components/Atoms/Container/Container';
 import { useInView } from 'react-intersection-observer';
+import Image from 'components/Atoms/Image/Image';
 
 const Hero = ({ scrollToRef }) => {
   const { inView: leftInView1, ref: leftRef1 } = useInView({
@@ -31,18 +32,22 @@ const Hero = ({ scrollToRef }) => {
 
 
   return (
-    <Container className={styles.gridContainer}>
+    <Container className={styles.gridWrapper}>
       <Container className={styles.promoPillWrapper}><PromoPill /></Container>
+    
       <Container ref={leftRef1} className={`${styles.leftBlock1} ${leftInView1 ? styles.slideInLeft : ''}`}>
-        <Paragraph className={styles.leftParagraph}>We are providing research development and training services in technology</Paragraph>
+        <Paragraph className={styles.pargraph}>We are providing research development and training services in technology</Paragraph>
       </Container>
+      
       <Container ref={leftRef2} className={`${styles.leftBlock2} ${leftInView2 ? styles.slideInLeft : ''}`}>
         <Paragraph className={styles.buttonTitle}>Request your service now!</Paragraph>
         <Button onClick={handleScrollToTech} className={styles.button}>Request</Button>
       </Container>
+      
       <Container ref={rightRef} className={`${styles.rightBlock} ${rightInView ? styles.slideInRight : ''}`}>
-        <img src="images/hero-image.png" alt="Descriptive Alt Text" />
+        <Image src="images/hero-image.png" alt="Descriptive Alt Text" className={styles.image} />
       </Container>
+    
     </Container>
   );
 };

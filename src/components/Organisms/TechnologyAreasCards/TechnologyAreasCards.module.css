@@ -1,72 +1,72 @@
 /* Base mobile styles */
 .areaWrapper {
-  background-color: var(--white);
-  background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  margin: 5vw;
-  max-width: 90vw;
-  padding: 10px;
-}
-
-.title {
-  align-self: center;
-  background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
-  font-size: 3rem;
-  margin: 3rem;
-  padding: 2rem;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 70vw; /* Ensure this is suitable for your mobile design */
+  margin: auto; /* Center the wrapper on the page */
 }
 
 .cardsWrapper {
-  background: linear-gradient(to bottom, #F8F9FB, #FAFBFF);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.805);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  grid-area: technology;
-  margin: 5vw;
   padding: 2rem;
-
+  margin: 5vw auto;
+  width: auto; /* Use auto to adapt based on content until a max-width is necessary */
 }
 
+.title {
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.805);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  margin: 3rem auto; /* Center the title */
+  padding: 2rem;
+  text-align: center;
+  max-width: 80%; /* Limit width to enhance readability */
+}
 
 /* Medium screens (tablets) */
 @media (min-width: 768px) {
-  .title {
-    padding: 2rem;
-  }
+  .areaWrapper, .cardsWrapper {
 
+    width: 100%; /* Adjust width for tablets */
+    max-width: 95vw; /* Prevent it from being too wide on large tablets */
+  }
   .cardsWrapper {
     flex-direction: row;
-    gap: 5vw;
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1000px) {
-  .areaWrapper {
-    flex-direction: column;
-  }
-
-  .cardsWrapper {
-    flex-direction: column;
+    max-width: 70vw;
+    gap: 3vw;
   }
 }
 
 /* Large screens (desktops) */
 @media (min-width: 1024px) {
+  .areaWrapper, .cardsWrapper {
+    max-width: 80vw; /* More suitable width for desktops */
+  }
   .cardsWrapper {
-    align-self: center;
-    flex-direction: row;
-    max-width: 80vw;
+    align-self: center; /* Ensure cards are centered in their container */
   }
 }
 
 /* Extra large screens */
 @media (min-width: 1440px) {
+  
   .cardsWrapper {
-    max-width: 60vw;
+    max-width: 60vw; /* Refine width for very large screens */
   }
 }
 

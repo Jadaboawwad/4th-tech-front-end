@@ -1,5 +1,5 @@
 /* Base mobile styles for the grid container and its elements */
-.gridContainer {
+.gridWrapper {
   margin: 2rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -7,39 +7,46 @@
   grid-template-areas:
     "promo"
     "left1"
-    "left3"
+    "left2"
     "right";
-  height: auto; 
-  padding: 1rem; 
+  height: auto;
+  padding: 1rem;
 }
 
 .promoPillWrapper {
   grid-area: promo;
   height: 100px;
-  padding: 16px 5%; 
+  padding: 16px 5%;
 }
 
-.leftBlock1,
-.leftBlock2,
-.rightBlock {
+.leftBlock1 {
   grid-area: left1;
+  padding: 8px 5%;
+}
+
+.leftBlock2 {
+  grid-area: left2;
   padding: 8px 5%;
 }
 
 .rightBlock {
   grid-area: right;
-  padding: 0px 10%; 
+  padding: 0px 10%;
 }
 
-.leftParagraph {
+.pargraph {
   color: white;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: bold;
+}
+
+.image {
+  width: 100%;
 }
 
 .buttonTitle {
   color: white;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   padding: 0.5rem;
   margin: 4px;
 }
@@ -50,12 +57,12 @@
   justify-content: center;
   background-color: #3671E9;
   color: white;
-  padding: 0.8rem 15px; 
+  padding: 0.8rem 15px;
   border-radius: 16px;
   border: none;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: bold;
   transition: all 0.3s;
   margin: 1rem;
@@ -66,47 +73,52 @@
 }
 
 .icon {
-  margin-left: 0.5rem; 
+  margin-left: 0.5rem;
   display: flex;
   align-items: center;
 }
 
 /* Styles for tablets and up */
 @media (min-width: 768px) {
-  .gridContainer {
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto; 
+  .gridWrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "promo promo"
       "left1 right"
-      "left3 right";
-    padding: 2rem 5vw; 
-    margin:0px 250px;
+      "left2 right";
+    padding: 2rem 5vw;
+    margin: 0px 250px;
+
   }
 
-  .leftParagraph, .buttonTitle {
-    font-size: 2rem; 
+  .pargraph {
+    font-size: 4rem;
   }
 
+  .buttonTitle{
+    font-size: 2rem;
+
+  }
   .button {
-    padding: 1rem 20px; 
-    font-size: 2rem; 
+    padding: 1rem 20px;
+    font-size: 2rem;
   }
 
   .icon {
-    margin-left: 1rem; 
+    margin-left: 1rem;
   }
 }
 
 /* Styles for desktops */
 @media (min-width: 1024px) {
-  .gridContainer {
-    grid-template-columns: 1fr 1fr 2fr; 
+  .gridWrapper {
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
       "promo promo promo"
       "left1 left1 right"
-      "left3 left3 right";
-    padding: 2rem 10vw; 
+      "left2 left2 right";
+    width: 75vw;
   }
 }
 
@@ -115,6 +127,7 @@
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -126,6 +139,7 @@
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
