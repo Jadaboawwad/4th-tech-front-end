@@ -1,93 +1,94 @@
 .featureSectionWrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "top"
-    "right"
-    "left";
-  padding: 20px;
-  background:transparent;
-  color: white;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: auto;
-  width: 80vw;
-  border-width: 1px;
+  align-items: center;
+  background: transparent;
   border-radius: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  padding: 20px;
+  width: 90vw;
 }
 
 
 .topWrapper {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  grid-area: top;
-  padding: 1rem;
-  background-color: transparent;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
   backdrop-filter: blur(10px);
   background-color: transparent;
+  background-color: transparent;
   border-radius: 8px;
+  display: flex;
+  grid-area: top;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .leftWrapper {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  grid-area: left;
-  padding: 100px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  grid-area: left;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  padding: 1rem;
 }
 
 .rightWrapper {
-  grid-area: right;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  grid-area: right;
+  max-width: 75vw;
   padding: 20px;
-  border-radius: 15px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-.topTitle {
-  font-size: 3rem;
-  color: var(--white);
-  margin-bottom: 15px;
-  background-color: transparent;
-  width: 50vw;
 }
 
+.topTitle {
+  background-color: transparent;
+  color: var(--var(--white));
+  font-size: 2rem;
+  margin-bottom: 15px;
+  width: 100%;
+}
 
 .image {
-  width: 100%;
-  height: auto;
   object-fit: cover;
+  width: 70vw;
 }
 
 .title {
-  font-size: 2rem;
   color: #EFEFEF;
+  font-size: 1.5rem;
   margin: 10px 0;
+  padding: 2rem;
 }
 
 .description {
-  font-size: 2rem;
   color: #CDCDCD;
+  font-size: 1rem;
   margin-bottom: 20px;
+  max-width: 70vw;
+  padding: 2rem;
 }
 
 .button {
-  padding: 0.75rem;
+  align-self: center;
   background-color: #007BFF;
-  font-size: 2rem;
-  color: white;
+  border-radius: 2rem;
   border: none;
-  border-radius: 1rem;
-  margin: 10px 0px;
+  color: var(--white);
   cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem;
+  padding: 2rem;
   transition: background-color 0.3s ease;
 }
 
@@ -96,30 +97,30 @@
 }
 
 
-/* Tablet and desktop adjustments */
+/* Adjustments for tablets and larger devices */
 @media (min-width: 768px) {
   .featureSectionWrapper {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "top top"
-      "right left";
+      "left right";
   }
+
 
   .rightWrapper {
-    padding: 200px;
     align-items: start;
+    margin: 1rem;
   }
 
-  .leftWrapper {
-    align-items: start;
-  }
 
   .image {
     max-width: 80%;
+    align-self: center;
   }
 }
 
-/* Larger desktop adjustments */
+/* Further adjustments for large desktops */
 @media (min-width: 1024px) {
   .featureSectionWrapper {
     grid-template-columns: 2fr 3fr;
@@ -136,18 +137,39 @@
 
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInRight {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Applying animations to elements */
@@ -162,7 +184,7 @@
 }
 
 .leftWrapper {
-  animation: slideInLeft 1s ease-out forwards; 
+  animation: slideInLeft 1s ease-out forwards;
   animation-delay: 0.6s;
 }
 

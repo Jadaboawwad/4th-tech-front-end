@@ -28,12 +28,8 @@ const FeatureSection = () => {
           Explore the latest in robotics trends, tailor your project portfolio, and deploy the AI solutions that best fit your objectives.
         </Title>
       </Container>
-
-      <Container ref={leftRef} className={`${styles.leftWrapper} ${leftInView ? styles.fadeIn : styles.hidden}`}>
-        <Image src="images/ml-background.png" alt="Machine Learning" className={styles.image} />
-      </Container>
-
-      <Container ref={rightRef} className={`${styles.rightWrapper} ${rightInView ? styles.fadeIn : styles.hidden}`}>
+    
+      <Container ref={leftRef} className={`${styles.leftWrapper} ${rightInView ? styles.fadeIn : styles.hidden}`}>
         <Title level="3" className={styles.title}>Engineer Innovatively</Title>
         <Paragraph className={styles.description}>
           Gain comprehensive analytics on AI and robotics trends to guide your strategic decisions.
@@ -42,6 +38,11 @@ const FeatureSection = () => {
           Learn More
         </Button>
       </Container>
+
+      <Container ref={rightRef} className={`${styles.rightWrapper} ${leftInView ? styles.fadeIn : styles.hidden}`}>
+        <Image src="images/ml-background.png" alt="Machine Learning" className={styles.image} />
+      </Container>
+
     </Container>
   );
 };

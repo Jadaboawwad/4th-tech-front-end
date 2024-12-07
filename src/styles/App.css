@@ -61,36 +61,17 @@
 .appContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center all content horizontally */
-  justify-content: center; /* Center content vertically */
-  min-height: 100vh; /* Minimum height to take full viewport height */
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
 }
 
-/* Hero and Cards styles for Mobile */
-.hero, .cardsWrapper {
-  display: flex;
-  flex-direction: column;
- 
-}
-
-.button, .buttonTitle, .leftParagraph {
-  text-align: center; 
-}
 
 /* Adaptation for tablets and desktops */
 @media (min-width: 768px) {
   .appContainer {
     padding: 32px; 
     gap: 20px;
-  }
-
-  .hero, .cardsWrapper {
-    flex-direction: row; 
-    gap: 20px;
-  }
-
-  .button, .buttonTitle, .leftParagraph {
-    text-align: left; 
   }
 }
 

@@ -1,15 +1,14 @@
-import React, {  forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styles from './TechnologyAreasCards.module.css';
 import Container from 'components/Atoms/Container/Container';
 import Card from 'components/Molecules/Card/Card';
 import Title from 'components/Atoms/Title/Title';
-import { useInView } from 'react-intersection-observer'; // Import the hook
-
+import { useInView } from 'react-intersection-observer';
 
 const TechnologyAreaCards = forwardRef((props, ref) => {
   const { inView, ref: inViewRef } = useInView({
-    threshold: 0.5, 
-    triggerOnce: true
+    threshold: 0.1,  // Lower threshold might be better for mobile
+    triggerOnce: true // Change to true to trigger animation once
   });
 
   const setRefs = node => {
@@ -23,7 +22,7 @@ const TechnologyAreaCards = forwardRef((props, ref) => {
   };
 
   return (
-    <Container className={`${styles.areaWrapper} ${inView ? styles.fadeIn : styles.hidden}`} ref={setRefs}>
+    <Container className={`${styles.areaWrapper} ${inView ? styles.fadeIn : ''}`} ref={setRefs}>
       <Title className={styles.title} level={'1'}>Technology Areas</Title>
       <Container className={styles.cardsWrapper}>
         <Card
