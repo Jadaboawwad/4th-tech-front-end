@@ -21,8 +21,8 @@
 
 .navbarList li a {
   color: var(--white);
-  font-size: 16px; 
-  margin: 10px;
+  font-size: 15px; 
+  margin: 5px;
   text-decoration: none;
   transition: color 0.3s; 
 }

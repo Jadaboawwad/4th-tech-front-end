@@ -1,42 +1,25 @@
 .aboutUsWrapper {
   animation: slideUpWithFade 1.3s;
   background: #0c1532;
-  display: grid;
-  grid-template:
-    [row1-start] 'header' 100px [row1-end]
-    [row2-start] 'cart' 100px [row2-end]
-    [row3-start] 'contactUs' auto [row3-end] / auto;
-  justify-content: center;
-  padding: 64px;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  width: 90vw;
 }
 
-.aboutUs {
-  min-height: 100vh;
-  width: 100vw;
-}
 
-@media (max-width: 1400px) {
+@media (min-width: 768px) {
   .aboutUsWrapper {
-    grid-template:
-      [row1-start] 'header' auto [row1-end]
-      [row2-start] 'cart' auto [row2-end]
-      [row3-start] 'contactUs' auto [row3-end] / auto;
-    zoom: 0.9;
+    width: 90vw;
   }
 }
 
-@media (max-width: 390px) {
+@media (min-width: 1400px) {
   .aboutUsWrapper {
-    zoom: 0.8;
+    width: 70vw;
   }
 }
 
-@media (max-width: 330px) {
-  .aboutUsWrapper {
-    zoom: 0.7;
-  }
-}
 
 @keyframes slideUpWithFade {
   0% {
