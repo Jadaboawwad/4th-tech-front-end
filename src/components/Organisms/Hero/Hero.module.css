@@ -37,10 +37,12 @@
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
+
 }
 
 .image {
   width: 100%;
+
 }
 
 .buttonTitle {
@@ -97,6 +99,7 @@
 
   .pargraph {
     font-size: 2rem;
+    margin: 1rem;
   }
 
   .buttonTitle{
@@ -106,6 +109,7 @@
 
   .image {
     width: 100%;
+    z-index: 100;
   }
   
   .button {
@@ -126,8 +130,10 @@
       "promo promo promo"
       "left1 left1 right"
       "left2 left2 right";
-    width: 90vw;
+    width: 70vw;
   }
+
+ 
 }
 
 @keyframes slideInLeft {

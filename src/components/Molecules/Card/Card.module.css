@@ -90,9 +90,19 @@
 @media (min-width: 1024px) {
   .cardWrapper {
     width: 700px;
-    /* Fix width for large screens */
     max-width: none;
-    /* Remove max-width constraint */
+    box-shadow: var(--card-shadow);
+    animation: slideUpWithFade 1.5s;
   }
 
+}
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

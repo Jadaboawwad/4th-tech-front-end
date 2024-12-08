@@ -5,6 +5,9 @@ import Container from 'components/Atoms/Container/Container';
 import Link from 'components/Atoms/Link/Link';
 import Title from 'components/Atoms/Title/Title';
 import Paragraph from 'components/Atoms/Paragraph/Paragraph';
+import { appText } from 'data/appText';
+import NavItem from 'components/Atoms/NavItem/NavItem';
+import NavList from 'components/Atoms/NavList/NavList';
 
 const Footer = () => (
     <Container className={styles.footerWrapper}>
@@ -13,17 +16,18 @@ const Footer = () => (
         </Container>
         <Container className={styles.linksWrapper}>
             <Title className={styles.label} level={'1'}>Quick Links</Title>
-            <Link href="/" className={styles.link}>Home</Link>
-            <Link href="/our-services" className={styles.link}>Our Services</Link>
-            <Link href="/about-us" className={styles.link}>About Us</Link>
-            <Link href="/contact-us" className={styles.link}>Contact Us</Link>
+            <NavList>
+                {appText.navItems.map((item, idx) => (
+                    <NavItem key={item} link={`/${appText.links[idx]}`} label={item} />
+                ))}
+            </NavList>
         </Container>
         <Container className={styles.paymentWrapper}>
             <Title className={styles.label} level={'1'}>We accept following payment systems</Title>
             <Image src="images/visa.png" alt="Visa Payment" />
         </Container>
         <Container className={styles.copyRightWrapper}>
-            <Paragraph  className={styles.copyRight}>©2024 4th Tech. All rights reserved</Paragraph>
+            <Paragraph className={styles.copyRight}>©2024 4th Tech. All rights reserved</Paragraph>
         </Container>
         <Container className={styles.socialMediaWrapper}>
             <Link href="https://www.facebook.com/4thtechjo/"> <Image src="images/facebook.png" alt="Facebook" className={styles.socialIcon} /></Link>

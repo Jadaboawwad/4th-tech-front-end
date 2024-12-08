@@ -21,7 +21,6 @@
 
 .title {
   backdrop-filter: blur(5px);
-  background: transparent;
   color: var(--white);
   font-size: 1.5rem;
   margin: 3rem auto;
@@ -46,9 +45,15 @@
   .areaWrapper,
   .cardsWrapper {
     align-self: center;
+    background-color: transparent;
     flex-direction: row;
     justify-content: center;
     gap: 3vw;
+  
+  }
+
+  .title{
+    font-size: 3rem;
   }
 }
 

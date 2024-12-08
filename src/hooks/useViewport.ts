@@ -5,19 +5,18 @@ export const useViewport = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1400) {
+      if (window.innerWidth >= 1441) {
         setViewport('extra-large')
-      } else if (window.innerWidth > 992) {
+      } else if (window.innerWidth >= 1025) {
         setViewport('large')
-      } else if (window.innerWidth > 768) {
+      } else if (window.innerWidth >= 769) {
         setViewport('medium')
-      } else if (window.innerWidth > 576) {
+      } else if (window.innerWidth >= 481) {
         setViewport('small')
       } else {
         setViewport('extra-small')
       }
     }
-
 
     window.addEventListener('resize', handleResize)
     handleResize()

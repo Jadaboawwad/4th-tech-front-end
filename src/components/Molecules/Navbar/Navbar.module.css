@@ -1,24 +1,58 @@
+
+/* Base mobile styles for the navbar */
 .navbarWrapper {
-  align-items: center;
   display: flex;
-  justify-content: space-around;
-  margin: 0 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2%;
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 .navbarList {
   display: flex;
   list-style: none;
-  width: 100%;
+  padding: 0; 
+  margin: 0; 
+  width: 100%; 
+  justify-content: space-around; 
+  align-items: center;
 }
 
 .navbarList li a {
   color: var(--white);
-  font-family: GoogleSans-Regular;
-  font-size: 0.9rem;
-  padding: 1vw;
+  font-size: 16px; 
+  margin: 10px;
   text-decoration: none;
+  transition: color 0.3s; 
 }
 
 .navbarList li a:hover {
   cursor: pointer;
+}
+
+/* Tablet and desktop adjustments */
+@media (min-width: 768px) {
+  .navbarWrapper {
+    justify-content: space-around; 
+    padding: 10px 5%;
+  }
+
+  .navbarList li a {
+    font-size: 20px;
+  }
+}
+
+/* Larger desktop adjustments */
+@media (min-width: 1024px) {
+  .navbarWrapper {
+    padding: 10px 10%;
+    
+  }
+
+  .navbarList {
+    padding: 10px;
+    justify-content: space-between;
+  }
+
 }
