@@ -22,7 +22,7 @@ describe('Navbar', () => {
       useViewportSpy.mockReturnValue('extra-large')
       render(
         <Router>
-          <Navbar />
+          <Navbar isInFooter={undefined} />
         </Router>
       )
       expect(navbarElements.items()).toHaveLength(6)
@@ -35,7 +35,7 @@ describe('Navbar', () => {
       useViewportSpy.mockReturnValue('extra-small')
       render(
         <Router>
-          <Navbar />
+          <Navbar isInFooter={undefined} />
         </Router>
       )
       expect(navbarElements.list()).not.toBeInTheDocument()

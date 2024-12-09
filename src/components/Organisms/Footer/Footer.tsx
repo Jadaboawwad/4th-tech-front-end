@@ -16,7 +16,7 @@ const Footer = () => (
         </Container>
         <Container className={styles.linksWrapper}>
             <Title className={styles.label} level={'1'}>Quick Links</Title>
-            <NavList>
+            <NavList isInFooter={true}>
                 {appText.navItems.map((item, idx) => (
                     <NavItem key={item} link={`/${appText.links[idx]}`} label={item} />
                 ))}

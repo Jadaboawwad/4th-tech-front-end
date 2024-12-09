@@ -9,7 +9,7 @@ import { useViewport } from 'hooks/useViewport'
 const Header: FC = () =>
 (
   <Container className={HeaderStyles.headerWrapper} testId="header">
-    <Navigation />
+    <Navigation isInFooter={false} />
     {useViewport() === 'extra-large' && <Logo testId="webLogo" />}
   </Container>
 )

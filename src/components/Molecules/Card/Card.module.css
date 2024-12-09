@@ -60,7 +60,7 @@
 /* Adjustments for tablets and larger devices */
 @media (min-width: 768px) {
   .cardWrapper {
-    min-width: 30vw;
+    width: 50vw;
   }
 
   .cardImage {
@@ -90,10 +90,9 @@
 /* Further adjustments for large desktops */
 @media (min-width: 1024px) {
   .cardWrapper {
-    width: 700px;
-    max-width: none;
     box-shadow: var(--card-shadow);
     animation: slideUpWithFade 1.5s;
+   
   }
 
   .cardTitle {

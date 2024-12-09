@@ -15,7 +15,7 @@
   height: 100px;
   justify-content: center;
   align-items: flex-start;
-  padding: 16px 7%;
+  padding: 0 4vw;
 }
 
 .leftBlock1 {
@@ -30,7 +30,6 @@
 
 .rightBlock {
   grid-area: right;
-  padding: 0px 10%;
 }
 
 .pargraph {
@@ -93,13 +92,12 @@
     padding: 1rem;
 
   }
-  .rightBlock{
-    align-content: center;
-  }
 
   .pargraph {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin: 1rem;
+    width: 20rem;
   }
 
   .buttonTitle{
@@ -133,6 +131,17 @@
     width: 70vw;
   }
 
+  .rightBlock {
+    justify-self: center;
+  }
+  
+
+
+  .pargraph {
+    font-size: 2rem;
+    font-weight: 300;
+    width:30vw;
+  }
  
 }
 

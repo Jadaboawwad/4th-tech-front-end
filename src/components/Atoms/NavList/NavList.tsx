@@ -1,12 +1,13 @@
 import React from 'react';
-import NavbarStyles from 'components/Molecules/Navbar/Navbar.module.css';
+import styles from 'components/Molecules/Navbar/Navbar.module.css';
 
 interface NavListProps {
   children: React.ReactNode;
+  isInFooter: boolean;
 }
 
-const NavList: React.FC<NavListProps> = ({ children }) => (
-  <ul className={NavbarStyles.navbarList} data-testid="navbarList">
+const NavList: React.FC<NavListProps> = ({ children, isInFooter }) => (
+  <ul className={isInFooter ? styles.navbarList : styles.nonFooterNavbarList} data-testid="navbarList">
     {children}
   </ul>
 );

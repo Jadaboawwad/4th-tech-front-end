@@ -37,20 +37,22 @@
     flex-direction: row;
     justify-content: center;
     gap: 3vw;
+    
   }
 }
 
 /* Further adjustments for large desktops */
 @media (min-width: 1024px) {
-  .areaWrapper,
-  .cardsWrapper {
+  .areaWrapper{
     align-self: center;
     background-color: transparent;
     flex-direction: row;
     justify-content: center;
     gap: 3vw;
+    width: 70vw;
   
   }
+
 
   .title{
     font-size: 3rem;

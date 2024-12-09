@@ -27,7 +27,7 @@ const Burger: FC = () => {
       </Container>
 
       {isActive && (
-        <NavList>
+        <NavList isInFooter={false}>
           {appText.navItems.map((el, idx) => (
             <NavItem key={el} link={`/${appText.links[idx]}`} label={el} />
           ))}

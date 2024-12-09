@@ -10,7 +10,7 @@ const useViewportSpy = jest.spyOn(useViewportModule, 'useViewport')
 
 beforeEach(() => {
   useViewportSpy.mockClear();  // Clear any previous calls to the spy
-  render(<Navigation />)
+  render(<Navigation isInFooter={undefined} />)
 })
 
 const navigationElements = {
@@ -26,7 +26,7 @@ describe('Navigation', () => {
 
     it('should not render Burger in web view and bars not active', () => {
       useViewportSpy.mockReturnValueOnce('extra-large')
-      render(<Navigation />)
+      render(<Navigation isInFooter={undefined} />)
       expect(navigationElements.bars()).not.toBeInTheDocument()  // This is the assertion to check the condition
     })
   })
