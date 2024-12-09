@@ -123,10 +123,7 @@
 
     .copyRightWrapper {
         align-items: flex-start;
-        padding-left: 8rem;
-    }
-
-    .link {
+        margin-left: 12vw;
     }
 
     .socialIcon {

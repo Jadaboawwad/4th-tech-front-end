@@ -60,12 +60,14 @@
 /* Adjustments for tablets and larger devices */
 @media (min-width: 768px) {
   .cardWrapper {
-    min-width: 25vw;
+    min-width: 30vw;
   }
 
   .cardImage {
     width: 100%;
     max-width: 200px;
+    max-height: 200px;
+    border-radius: 1rem;
   }
 
   .cardContent {
@@ -73,12 +75,11 @@
   }
 
   .cardTitle {
-    font-size: 2rem;
-
+    font-size: 1rem;
   }
 
   .cardDescription {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .cardButton {
@@ -93,6 +94,19 @@
     max-width: none;
     box-shadow: var(--card-shadow);
     animation: slideUpWithFade 1.5s;
+  }
+
+  .cardTitle {
+    font-size: 3rem;
+  }
+
+  .cardDescription {
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+
+  .cardButton {
+    font-size: 2rem;
   }
 
 }
