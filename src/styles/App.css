@@ -3,6 +3,7 @@
   --anakiwaapprox: #97e8fe;
   --robinEggBlue : #05DCBD;
   --burntSienna: #eb5757;
+  --wildsand : #F5F5F5;
   --black: #000000;
   --card-shadow: 2px 10px 40px rgba(45, 65, 102, 0.1);
   --cart-shadow: 0 25px 40px #1687d933;
@@ -65,6 +66,30 @@
   align-items: center; 
   justify-content: center; 
   min-height: 100vh; 
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000; /* High z-index to ensure visibility on top of other elements */
+}
+
+.whatsapp-image{
+  width: 80px;
+    background-color: transparent;
+}
+
+.whatsapp-float i {
+  margin-top: 16px; /* Adjusts icon position within the circle */
 }
 
 
