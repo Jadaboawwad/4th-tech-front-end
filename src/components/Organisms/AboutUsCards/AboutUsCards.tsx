@@ -30,14 +30,14 @@ const AboutUsCards = forwardRef((props, ref) => {
                     title="CEO & Founder"
                     subtitle="Ahmad leads our team with a focus on innovation in Technology and Engineering"
                     buttonText="LinkedIn Profile"
-                    onButtonClick={() => window.open("https://www.linkedin.com/in/ahmad-mubarak-b5a085177/", "_blank")}
+                    onButtonClick={() => open("https://www.linkedin.com/in/ahmad-mubarak-b5a085177/", "_blank")}
                 />
                 <Card
                     imageSrc="images/about-us-jehad.jpg"
                     title="Technical Development Leader"
                     subtitle="Jehad drives our software development, ensuring we build solutions based on client needs."
                     buttonText="LinkedIn Profile"
-                    onButtonClick={() => window.open("www.linkedin.com/in/jadabuawwad/", "_blank")}
+                    onButtonClick={() => open("https://www.linkedin.com/in/jadabuawwad/ ", "_blank")}
                 />
 
             </Container>

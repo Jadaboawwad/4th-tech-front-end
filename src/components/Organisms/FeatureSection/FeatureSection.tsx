@@ -6,8 +6,15 @@ import Paragraph from 'components/Atoms/Paragraph/Paragraph';
 import Button from 'components/Atoms/Button/Button';
 import { useInView } from 'react-intersection-observer';
 import styles from './FeatureSection.module.css'; // Ensure this path is correct
+import { useNavigate } from 'react-router-dom';
 
 const FeatureSection = () => {
+  const navigate = useNavigate()
+
+  const handleButtonClick = () => {
+    navigate('/about-us') // This will navigate to the Contact Us page
+  }
+
   const { inView: topInView, ref: topRef, } = useInView({
     threshold: 0.5,
     triggerOnce: false
@@ -34,7 +41,7 @@ const FeatureSection = () => {
         <Paragraph className={styles.description}>
           Gain comprehensive analytics on AI and robotics trends to guide your strategic decisions.
         </Paragraph>
-        <Button onClick={() => console.log('Learn More about ML')} className={styles.button}>
+        <Button onClick={handleButtonClick} className={styles.button}>
           Learn More
         </Button>
       </Container>
