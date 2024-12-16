@@ -23,9 +23,13 @@ Here’s an updated version for a company specializing in **robotics and artific
 
 ### **Version 1.0**  
 - **Release Title:** Application Initialization  
-- **Release Description:**  
-  The codebase was created, and the React application was structured using the atomic design pattern to ensure scalability and maintainability.  
-- **Release Date:** 16/8/2022  
+- **Release Description:**  The codebase was created, and the React application was structured using the atomic design pattern to ensure scalability and maintainability.  
+- **Release Date:** 2/12/2024  
+
+### **Version 1.1**  
+- **Release Title:** Application Launched  
+- **Release Description:**  The app was designed and implemented.
+- **Release Date:** 16/12/2022  
 
 ---
 

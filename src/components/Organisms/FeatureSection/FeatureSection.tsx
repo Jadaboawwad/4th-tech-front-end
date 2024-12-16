@@ -14,6 +14,7 @@ const FeatureSection = () => {
   const handleButtonClick = () => {
     navigate('/about-us') // This will navigate to the Contact Us page
   }
+  
 
   const { inView: topInView, ref: topRef, } = useInView({
     threshold: 0.5,

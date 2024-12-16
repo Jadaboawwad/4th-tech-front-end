@@ -15,6 +15,10 @@ function Navigation({ isInFooter }) {
       return <Burger />
     }
 
+    if (viewport === 'large') {
+      return <Navbar isInFooter={isInFooter} />
+    }
+    
     return <Burger />
   }, [viewport]) as JSX.Element
 
