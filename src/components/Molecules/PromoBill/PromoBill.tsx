@@ -8,7 +8,7 @@ const PromoPill = () =>
   <Container className={PrompBillStyles.promoPillWrapper}>
     <span className={PrompBillStyles.badge}>25% SAVE</span>
     <span className={PrompBillStyles.description}>
-      on 3D Printing Services
+      on 3D Printing Services & 3D Design
     </span>
   </Container>
 );

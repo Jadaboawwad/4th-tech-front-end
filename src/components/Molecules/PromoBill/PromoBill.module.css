@@ -1,42 +1,49 @@
 /* Base styles optimized for mobile screens */
 .promoPillWrapper {
-  display: inline-flex;
   align-items: center;
   background-color: #1a1a3d;
-  padding: 4px 10px;
-  border-radius: 25px;
-  color: white;
+  border-radius: 2rem;
+  color: var(--white);
+  display: inline-flex;
   font-family: Arial, sans-serif;
-  font-size: 1.25rem;
-  height: 30px;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  max-width: 100%;
 }
 
 .badge {
-  background-color: white;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 2rem;
   color: #1a1a3d;
+  display: flex;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 2px 4px;
-  border-radius: 12px;
+  justify-content: center;
   margin-right: 8px;
-  font-size: 0.65rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .description {
-  color: white;
-  font-size: 1rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
 }
 
 
 /* Media query for tablets (min-width: 768px) */
 @media (min-width: 768px) {
   .promoPillWrapper {
-    font-size: 1.5rem;
-    padding: 6px 12px;
-    height: 35px;
+    padding: 1rem;
+    height: 70%;
+
   }
 
   .badge {
-    font-size: 0.75rem;
+    font-size: 1rem;
     padding: 4px 8px; 
   }
 
@@ -48,14 +55,13 @@
 /* Media query for desktops (min-width: 1024px) */
 @media (min-width: 1024px) {
   .promoPillWrapper {
-    font-size: 2rem;
-    padding: 8px 16px;
-    height: 40px; 
+    padding: 1rem;
+    height: 80%;
   }
 
   .badge {
     font-size: 0.85rem;
-    padding: 6px 10px;
+    padding: 8px 16px;
   }
 
   .description {
@@ -66,10 +72,9 @@
 /* Media query for large desktops (min-width: 1440px) */
 @media (min-width: 1440px) {
   .promoPillWrapper {
-    font-size: 2.5rem;
-    padding: 10px 20px;
-    height: 50px;
+    padding: 0.5rem;
     margin-left: -50px; 
+    height: 70%;
   }
 
   .badge {
@@ -78,6 +83,6 @@
   }
 
   .description {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
