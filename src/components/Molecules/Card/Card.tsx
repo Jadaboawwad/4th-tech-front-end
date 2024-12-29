@@ -21,8 +21,8 @@ const Card: React.FC<CardProps> = ({ buttonText, imageSrc, onButtonClick, subtit
     <Container className={styles.cardContent}>
       <Title className={styles.cardTitle} level="3">{title}</Title>
       <Paragraph className={styles.cardDescription} >{subtitle}</Paragraph>
-      <Button className={styles.cardButton} onClick={onButtonClick}>{buttonText}</Button>
     </Container>
+      <Button className={styles.cardButton} onClick={onButtonClick}>{buttonText}</Button>
   </Container>
 );
 

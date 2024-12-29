@@ -31,19 +31,18 @@
 /* Adjustments for tablets and larger devices */
 @media (min-width: 768px) {
     .areaWrapper {
+        justify-content: flex-start;
         align-self: center;
         width: 90vw;
     }
     .cardsWrapper {
         align-self: center;
+        align-items: flex-start;
         background-color: transparent;
         display: flex;
         flex-direction: row;
         gap: 3vw;
-        gap: 3vw;
         justify-content: center;
-        width: 80vw;
-
     }
 }
 
