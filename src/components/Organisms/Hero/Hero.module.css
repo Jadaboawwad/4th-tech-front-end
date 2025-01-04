@@ -5,6 +5,7 @@
   flex-direction: column;
   height: auto;
   padding: 1rem;
+  
 }
 
 .promoPillWrapper {
@@ -16,6 +17,10 @@
   justify-content: center;
   align-items: flex-start;
   padding: 0 4vw;
+}
+
+.latestNewsPillWrapper{
+  margin: 2rem;
 }
 
 .leftBlock1 {
@@ -36,6 +41,7 @@
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
+  
 
 }
 
@@ -84,12 +90,11 @@
   .gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "promo promo"
       "left1 right"
       "left2 right";
-    padding: 1rem;
 
   }
 
@@ -118,6 +123,9 @@
   .icon {
     margin-left: 1rem;
   }
+  .latestNewsPillWrapper{
+    margin: 1rem;
+  }
 }
 
 /* Further adjustments for large desktops */
@@ -128,21 +136,21 @@
       "promo promo promo"
       "left1 left1 right"
       "left2 left2 right";
-    width: 70vw;
   }
 
   .rightBlock {
     justify-self: center;
   }
-  
-
 
   .pargraph {
     font-size: 2rem;
     font-weight: 300;
     width:30vw;
   }
- 
+
+  .latestNewsPillWrapper{
+    margin: 4vw;
+  }
 }
 
 @keyframes slideInLeft {

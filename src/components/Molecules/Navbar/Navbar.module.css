@@ -11,7 +11,6 @@
   justify-content: space-between;
   list-style: none;
   margin: 0;
-  padding: 0;
   padding: 10px;
   width: 100%;
 }
@@ -32,7 +31,7 @@
 .nonFooterNavbarList {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   list-style: none;
   margin: 0;
@@ -44,8 +43,7 @@
 
 .nonFooterNavbarList li a {
   color: var(--white);
-  font-size: 1rem;
-  margin: 5px;
+  font-size: 1.25rem;
   text-decoration: none;
   transition: color 0.3s;
 }
