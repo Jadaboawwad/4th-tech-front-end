@@ -1,0 +1,45 @@
+/* Base styles and mobile-first styles */
+.ourWorkshopsWrapper {
+  animation: slideUpWithFade 1.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.ourWorkshops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 90vw;
+  margin: auto;
+}
+
+@keyframes slideUpWithFade {
+  0% {
+    opacity: 0.1;
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .ourWorkshops {
+    margin: 200px auto;
+  }
+  .ourWorkshopsWrapper {
+    animation: slideUpWithFade 1.3s;
+    background: #0c1532;
+    display: grid;
+    grid-template:
+      [row1-start] 'header' auto [row1-end]
+      [row2-start] 'cart' auto [row2-end]
+      [row3-start] 'ourWorkshops' auto [row3-end] / auto;
+    justify-content: center;
+    padding: 64px;
+    height: 99vh;
+  }
+}

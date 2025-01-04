@@ -36,6 +36,7 @@ export const appText = {
   links: [
     '',
     'our-services',
+    'our-workshops',
     'about-us',
     'contact-us',
   ],
@@ -44,6 +45,7 @@ export const appText = {
   navItems: [
     'Home',
     'Our Services',
+    'Our Workshops',
     'About Us',
     'Contact Us',
   ],
