@@ -30,10 +30,10 @@
 }
 
 .description {
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   line-height: 1.5;
   color: var(--white);
-  text-align: center; 
+  text-align: center;
   border-radius: 10px;
   padding: 3rem;
 }
@@ -41,17 +41,16 @@
 /* Adjustments for tablets and larger devices */
 @media (min-width: 768px) {
   .areaWrapper {
-   width: 90vw;
+    width: 90vw;
   }
 
   .title {
     font-size: 2rem;
   }
-  
-  .description {
-    font-size: 1.75rem;
-  }
 
+  .description {
+    font-size: 1.4rem;
+  }
 }
 
 /* Further adjustments for large desktops */
@@ -59,6 +58,7 @@
   .areaWrapper {
     background-color: var(--outerSpace);
     border-radius: 12px;
+    margin: 5rem;
   }
 
   .cardsWrapper {
@@ -72,6 +72,17 @@
   .title {
     font-size: 3rem;
     background-color: var(--portGore);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 2rem;
   }
 }
 

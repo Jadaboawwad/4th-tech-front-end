@@ -11,12 +11,11 @@ const OurWorkshopsHero = forwardRef((props, ref) => {
     triggerOnce: true,
   })
 
-
   const handleButtonClick = () => {
     window.location.href =
       'https://www.youtube.com/watch?v=KISXj_dFrOk&ab_channel=RASBAU'
   }
-  
+
   const setRefs = (node) => {
     inViewRef(node)
 
@@ -47,7 +46,7 @@ const OurWorkshopsHero = forwardRef((props, ref) => {
           title="Applied Machine Learning"
           buttonText="See More"
           onButtonClick={handleButtonClick}
-          subtitle="Delivered a comprehensive presentation on the fundamentals of Machine Learning, exploring key concepts, applications, and emerging trends. This session provided attendees with valuable insights into leveraging machine learning technologies for enhancing business strategies and operational efficiencies."
+          subtitle="a comprehensive presentation on the fundamentals of Machine Learning, exploring key concepts, applications, and emerging trends. This session provided attendees with valuable insights into leveraging machine learning technologies for enhancing business strategies and operational efficiencies."
         />
       </Container>
     </Container>

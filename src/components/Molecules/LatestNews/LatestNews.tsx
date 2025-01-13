@@ -7,7 +7,7 @@ const LatestNews = () =>
 (
   <Container className={styles.latestNewsPillWrapper}>
     <span className={styles.description}>
-     Watch Latest Workshop
+     Watch Our Latest Workshop
     </span>
   </Container>
 );

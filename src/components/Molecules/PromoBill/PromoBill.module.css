@@ -7,20 +7,16 @@
   display: inline-flex;
   font-family: Arial, sans-serif;
   padding: 0.5rem;
-  margin-bottom: 3rem;
-  max-width: 100%;
   animation: pulse 2s infinite;
 }
 
 .badge {
-  align-items: center;
   background-color: var(--white);
   border-radius: 2rem;
   color: #1a1a3d;
   display: flex;
   font-size: 1rem;
   font-weight: bold;
-  justify-content: center;
   margin-right: 8px;
   padding: 0.5rem;
   text-align: center;
@@ -29,7 +25,7 @@
 .description {
   color: var(--white);
   font-size: 1.25rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 2rem;
   text-align: center;
 }
@@ -56,8 +52,7 @@
 /* Media query for desktops (min-width: 1024px) */
 @media (min-width: 1024px) {
   .promoPillWrapper {
-    padding: 1rem;
-    height: 80%;
+    height: 100%;
   }
 
   .badge {

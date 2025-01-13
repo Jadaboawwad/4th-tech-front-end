@@ -7,15 +7,14 @@
   transition: transform 0.3s ease-in-out;
   background: var(--background);
   color: var(--white);
+  margin-bottom: 2rem;
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  padding: 2rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 80vw;
 }
-
 
 .title {
   margin-bottom: 10px;
@@ -25,7 +24,7 @@
 
 .description {
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: lighter;
   max-width: 100%;
   text-align: center;
 }
@@ -66,7 +65,7 @@
     padding: 40px;
   }
 
-  .image{
+  .image {
     width: 33%;
   }
 
@@ -79,7 +78,5 @@
     font-size: 2rem;
     max-width: 50vw;
     text-align: left;
-   
   }
 }
-

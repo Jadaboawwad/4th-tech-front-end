@@ -6,8 +6,8 @@ import Textarea from 'components/Atoms/TextArea/TextArea'
 import Button from 'components/Atoms/Button/Button'
 import useForm from 'hooks/useForm'
 import Form from 'components/Atoms/Form/Form'
-import Mailto from 'components/MailTo/MailTo'
 import Heading from 'components/Atoms/Heading/Heading'
+import Mailto from 'components/Atoms/MailTo/MailTo'
 
 const ContactForm = () => {
   const { formData, handleInputChange, handleSubmit } = useForm(
